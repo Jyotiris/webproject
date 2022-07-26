@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:ghostwhite;
+            }
+            button{
+                background-color: red;
+                width: 30%;
+                border: none;
+                float: center;
+                font-size: 15px;
+                opacity:0.7;
+                color: white;
+                padding: 12px 28px;
+                border-radius: 8px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+                width: 380px;
+                height: 480px;
+                margin: 6% auto;
+                position: relative;
+                padding: 5%;
+                background-color: white;
+                
+            }
+            input[type=email],input[type=text]{
+                width: 100%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid #555;
+                border-radius: 8px; 
+                
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity: 0.7;
+
+            }
+            .container{
+                border-radius: 8px;
+                background-color:white;
+                text-align: left;
+                box-shadow: 0px 25px 30px rcgba(0,0,0,0.1);
+            }
+                 nav{
+                    height: 60px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0px 50px 0px 100px;
+                 }
+                 .logo{
+                    font-size: 33px;
+                    font-family:Impact;
+                    color: black;
+                 }
+
+                 .logo1 {
+                    font-size: 33px;
+                    font-family:Halvetica;
+                    color: red;
+                }
+                 nav ul{
+                    display: flex;
+                    list-style: none;
+                    font-weight: 600;
+                 }
+                 nav ul li{
+                    margin: 0 5px;
+                 }
+                 nav ul li a{
+                    color:black;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                    transition: all 0.3s ease;
+                    
+                 }
+                    a:hover {
+                     color: #FFF;
+                         background: #F00;
+                         transition: 0.7s;
+                    }                
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <p>
+                      <span class="logo">Backened</span> <span class="logo1">Com</span>
+                    </p>
+                  </div>
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form action="/login" method="post">
+
+            <center><div class="container">
+                <h1><b>Login</b></h1>
+            	<label for ='email'>Email</label><br>
+            	<input type="email" placeholder="Enter email" name="email" float="right"  required><br>  <br>
+            	
+                <label for='password'>Password</label><br>
+            	<input type="text" type="password" placeholder="Enter Password" name="password" required><br><br>
+                <button type="submit" class="btnRegister" value="index">Login
+                </button><br>
+        
+            </div></center>
+        </form>
+    </body>
+</html>
