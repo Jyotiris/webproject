@@ -1,10 +1,13 @@
 const express = require("express");
+const path =require("path");
 const app = express();
 const mongoose = require("mongoose");
 require("./db/conn");
 const Register = require("./models/registers");
 //mongoose.connect("mongodb://localhost:27017/ttjyoti");
 const port = process.env.PORT ||8008;
+const static_path =path.join(__dirname, "../views" );
+app.use(express.static(static_path));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
