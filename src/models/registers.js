@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const employeeScchema = new mongoose.Schema({
+const employeeSchema = new mongoose.Schema({
   first_name  : {
     type:String,
     required:true
@@ -21,8 +21,8 @@ const employeeScchema = new mongoose.Schema({
   confirmpassword  : {
     type:String,
     required:true
-  },
+  }
 })
 
-const Register = new mongoose.model("Register",employeeScchema);
+const Register = new mongoose.model("Register",employeeSchema);
 module.exports= Register;
