@@ -27,7 +27,7 @@ app.post("/register", async (req, res) => {
 
         const password = req.body.password;
         const cpassword = req.body.confirmpassword;
-        if(password === cpassword){
+        if(password == cpassword){
 
             const registerEmployee = new Register({
                 first_name : req.body.first_name,
@@ -38,7 +38,7 @@ app.post("/register", async (req, res) => {
              });
 
             const registered = await registerEmployee.save();
-            res.status(201).render("/index");
+            res.status(201).render("index");
 
         }else{
             res.send("Password are not matching")
