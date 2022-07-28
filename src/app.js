@@ -37,7 +37,7 @@ app.post("/register", async (req, res) => {
                 confirmpassword : cpassword
              });
 
-            const registererd = await registerEmployee.save();
+            const registered = await registerEmployee.save();
             res.status(201).render("index");
 
         }else{
