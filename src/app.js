@@ -38,7 +38,7 @@ app.post("/register", async (req, res) => {
              });
 
             const registered = await registerEmployee.save();
-            res.status(201).render("index");
+            res.status(201).render("/index");
 
         }else{
             res.send("Password are not matching")
