@@ -22,7 +22,7 @@ const employeeSchema = new mongoose.Schema({
     type:String,
     required:true
   }
-})
+});
 
 const Register = new mongoose.model("Register",employeeSchema);
 module.exports= Register;

@@ -6,7 +6,7 @@ require("./db/conn");
 const Register = require("./models/registers");
 //mongoose.connect("mongodb://localhost:27017/ttjyoti");
 const port = process.env.PORT ||8008;
-const static_path =path.join(__dirname, "../views" );
+const static_path =path.join(__dirname, "./views" );
 app.use(express.static(static_path));
 
 app.use(express.json());
@@ -19,7 +19,7 @@ app.get("/",(req, res) => {
 });
 app.get("/register",(req, res) => {
     res.render("register");
-})
+});
 
 
 app.post("/register", async (req, res) => {
@@ -27,7 +27,7 @@ app.post("/register", async (req, res) => {
 
         const password = req.body.password;
         const cpassword = req.body.confirmpassword;
-        if(password == cpassword){
+        if(password === cpassword){
 
             const registerEmployee = new Register({
                 first_name : req.body.first_name,
@@ -41,7 +41,7 @@ app.post("/register", async (req, res) => {
             res.status(201).render("index");
 
         }else{
-            res.send("Password are not matching")
+            res.send("Password are not matching");
         }
 
     }catch (error) {
