@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 require("./db/conn");
 const Register = require("./models/registers");
-//mongoose.connect("mongodb://localhost:27017/ttjyoti");
+mongoose.connect("mongodb+srv://root:root@cluster0.ye8bm09.mongodb.net/ttjyoti?retryWrites=true&w=majority");
 const port = process.env.PORT ||8008;
 const static_path =path.join(__dirname, "./views" );
 app.use(express.static(static_path));
